@@ -54,7 +54,7 @@
         .contact-form .label {
             position: absolute;
             left: 20px;
-            bottom: 11px;
+            bottom: 15px;
             font-size: 18px;
             line-height: 26px;
             font-weight: 400;
@@ -91,7 +91,6 @@
             text-transform: uppercase;
             padding: 10px;
             margin-top: 5px;
-
         }
     </style>
 </head>
@@ -164,23 +163,24 @@
 
     <script>
         function validateForm() {
-            var inputs = document.querySelectorAll('.input-text');
-            for (var i = 0; i < inputs.length; i++) {
-                if (inputs[i].value.trim() === '') {
-                    alert('Please fill all required fields.');
-                    return false;
-                }
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+
+            if (name === '' || email === '' || phone === '') {
+                alert('Please fill all required fields.');
+                return false;
             }
+
             return true;
         }
-    </script>
-    <script>
+
         function onClick(e) {
           e.preventDefault();
           grecaptcha.enterprise.ready(async () => {
             const token = await grecaptcha.enterprise.execute('6LfAa_YpAAAAAHLQVMblPcplDrdy8HdfLfmyD7ek', {action: 'LOGIN'});
           });
         }
-      </script>
+    </script>
 </body>
 </html>
