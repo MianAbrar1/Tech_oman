@@ -20,7 +20,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            background: linear-gradient(45deg, #f4524d, #5543ca);
+            background: rgb(176 176 176 / 66%);
             background-size: cover;
             position: relative;
         }
@@ -38,8 +38,8 @@
         .get-in-touch {
             max-width: 800px;
             width: 100%;
-            margin: 50px auto;
-            background: rgb(176 176 176 / 66%);
+            margin: 0 auto; /* Remove margin-top to eliminate space */
+            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -69,7 +69,7 @@
             height: 36px;
             border-width: 0 0 2px 0;
             border-color: #ca4343;
-            font-size: 18px;
+            font-size: 15px;
             line-height: 26px;
             font-weight: 400;
         }
@@ -130,6 +130,9 @@
         .full-width {
             width: 100%;
         }
+        .full-width::placeholder {
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -151,9 +154,7 @@
                     <label class="full-width"><input type="text" name="it_events_suggestion" placeholder="Suggest if you have something you think should be arranged" class="input-text"></label>
                 </div>
             </fieldset>
-            <div class="intro-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nulla et lacus suscipit interdum a et lectus. Sed vehicula justo non urna aliquet, in scelerisque sapien convallis. Integer non lectus ut nulla commodo pharetra. Nam fermentum eros sit amet ex vulputate, in interdum ligula dictum.
-            </div>
+
             <fieldset class="col-lg-12">
                 <legend class="toggle-legend">Online Incubation Center</legend>
                 <div class="hidden-content">
@@ -166,9 +167,7 @@
                     <label class="full-width"><input type="text" name="incubation_suggestion" placeholder="Suggest if you have something you think should be arranged" class="input-text"></label>
                 </div>
             </fieldset>
-            <div class="intro-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nulla et lacus suscipit interdum a et lectus. Sed vehicula justo non urna aliquet, in scelerisque sapien convallis. Integer non lectus ut nulla commodo pharetra. Nam fermentum eros sit amet ex vulputate, in interdum ligula dictum.
-            </div>
+
             <fieldset class="col-lg-12">
                 <legend class="toggle-legend">Learning Management System (LMS)</legend>
                 <div class="hidden-content">
